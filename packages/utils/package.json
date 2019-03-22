@@ -11,5 +11,6 @@
     "@babel/core": "^7.4.0",
     "@babel/plugin-transform-spread": "^7.2.2",
     "@babel/preset-env": "^7.4.2"
-  }
+  },
+  "gitHead": "ac7a252a95b2a78d1afdc15fe8cfb1f4d83aa64b"
 }
