@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prebuild": "rm -rf ../../styles",
     "build": "postcss ./src/*.css --use autoprefixer -d ../../styles",
     "start": "npm run build -- --watch"
   },

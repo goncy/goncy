@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "license": "MIT",
   "scripts": {
+    "prebuild": "rm -rf ../../components",
     "build": "babel src -d ../../components",
     "start": "npm run build -- --watch"
   },
