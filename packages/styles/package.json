@@ -1,0 +1,14 @@
+{
+  "name": "@goncy/styles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "postcss ./src/*.css --use autoprefixer -d ../../styles",
+    "start": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "postcss-cli": "^6.1.2"
+  }
+}
