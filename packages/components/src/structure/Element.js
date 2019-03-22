@@ -18,8 +18,12 @@ const Element = styled.div(
     pr,
     bg,
     c,
+    w,
+    h,
     cursor,
     onClick,
+    display,
+    flexDirection,
   }) => ({
     margin: m,
     marginBottom: mb || mv,
@@ -31,9 +35,13 @@ const Element = styled.div(
     paddingTop: pt || pv,
     paddingLeft: pl || ph,
     paddingRight: pr || ph,
+    width: w,
+    height: h,
     backgroundColor: `var(--${bg})`,
     color: `var(--${c})`,
     cursor: cursor || onClick ? 'pointer' : 'inherit',
+    display,
+    flexDirection,
   })
 );
 

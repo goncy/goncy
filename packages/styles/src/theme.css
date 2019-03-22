@@ -1,34 +1,15 @@
-:root {
-  --white: #ffffff;
-  --light: #fafafa;
-  --light-darker: #f5f5f5;
-  --gray: #DAE0E6;
-  --dark: #212121;
-  --black: #000;
-  --error: #f95168;
-  --dark-lighter: #3f3f3f;
-  --primary: #9bc548;
-  --primary-lighter: #fffa7f;
-  --linkedin-blue: #0077B5;
-  --facebook-blue: #4167B2;
-  --font-family-default: "Averta";
-  --z1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  --z2: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
 html, body, #root {
-  font-family: Akkurat Std, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  background-color: var(--gray);
+  color: var(--dark-lighter);
+  font-family: Camphor, Open Sans, Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
   Oxygen, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0;
   line-height: 2rem;
-  background-image: linear-gradient(-45deg, var(--primary), var(--accent));
-  background-color: var(--gray);
   font-size: 1rem;
   font-size: 18px;
   overflow: hidden;
-  color: var(--dark-lighter);
 }
 
 html {

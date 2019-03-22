@@ -16,8 +16,12 @@ var Element = styled.div(function (_ref) {
       pr = _ref.pr,
       bg = _ref.bg,
       c = _ref.c,
+      w = _ref.w,
+      h = _ref.h,
       cursor = _ref.cursor,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      display = _ref.display,
+      flexDirection = _ref.flexDirection;
   return {
     margin: m,
     marginBottom: mb || mv,
@@ -29,9 +33,13 @@ var Element = styled.div(function (_ref) {
     paddingTop: pt || pv,
     paddingLeft: pl || ph,
     paddingRight: pr || ph,
+    width: w,
+    height: h,
     backgroundColor: "var(--".concat(bg, ")"),
     color: "var(--".concat(c, ")"),
-    cursor: cursor || onClick ? 'pointer' : 'inherit'
+    cursor: cursor || onClick ? 'pointer' : 'inherit',
+    display: display,
+    flexDirection: flexDirection
   };
 });
 export default Element;
