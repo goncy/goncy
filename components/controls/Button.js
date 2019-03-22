@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 var Button = function Button() {
   return React.createElement(
-    "div",
+    'div',
     null,
-    "<Button />"
+    '<Button />'
   );
 };
 
