@@ -1,0 +1,53 @@
+---
+name: Form
+menu: Controls/Form
+route: /controls/form
+---
+
+# Form
+*A proxy from Formik `Form`*
+
+# Field
+*A Field for Form*
+
+## Props
+*Extends Formik `FormConfig`*
+
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|label|`string`|-|Label for the item|
+|name|`string`|-|Name of the property that should be mapped to the input|
+|children|`Element<Input>`|-|Input type element|
+
+# FormConfig
+*A proxy from Formik `FormConfig`*
+
+## Props
+*Extends Formik `FormConfig`*
+
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|initialValues|`?Values`|-|Initial values for the form|
+|onSubmit|`(Values, FormikBag) => void`|-|Function to be called on submit|
+|children|`formikBag => Element`|-|Content of the form|
+
+## Usage
+import {Playground} from "docz";
+
+import {FormConfig, Form, Field} from "./Form/index.js";
+
+<Playground>
+  <FormConfig
+    initialValues={{name: 'Gonzalo'}}
+    onSubmit={console.log}
+  >
+    {({ isValid, handleSubmit }) => (
+      <Form>
+        <Field name="name">
+          <input type="text"/>
+        </Field>
+        <button type="submit">Submit</button>
+      </Form>
+    )}
+  </FormConfig>
+</Playground>
