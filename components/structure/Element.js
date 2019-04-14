@@ -1,4 +1,15 @@
 import styled from 'styled-components';
+
+var fallback = function fallback() {
+  for (var _len = arguments.length, options = new Array(_len), _key = 0; _key < _len; _key++) {
+    options[_key] = arguments[_key];
+  }
+
+  return options.reduce(function (acc, value) {
+    return acc !== undefined ? acc : value;
+  });
+};
+
 var Element = styled.div(function (_ref) {
   var m = _ref.m,
       mv = _ref.mv,
@@ -15,6 +26,7 @@ var Element = styled.div(function (_ref) {
       pl = _ref.pl,
       pr = _ref.pr,
       bg = _ref.bg,
+      br = _ref.br,
       c = _ref.c,
       w = _ref.w,
       h = _ref.h,
@@ -24,19 +36,20 @@ var Element = styled.div(function (_ref) {
       flexDirection = _ref.flexDirection;
   return {
     margin: m,
-    marginBottom: mb || mv,
-    marginTop: mt || mv,
-    marginLeft: ml || mh,
-    marginRight: mr || mh,
+    marginBottom: fallback(mb, mv),
+    marginTop: fallback(mt, mv),
+    marginLeft: fallback(ml, mh),
+    marginRight: fallback(mr, mh),
     padding: p,
-    paddingBottom: pb || pv,
-    paddingTop: pt || pv,
-    paddingLeft: pl || ph,
-    paddingRight: pr || ph,
+    paddingBottom: fallback(pb, pv),
+    paddingTop: fallback(pt, pv),
+    paddingLeft: fallback(pl, ph),
+    paddingRight: fallback(pr, ph),
+    borderRadius: br,
     width: w,
     height: h,
-    backgroundColor: "var(--".concat(bg, ")"),
-    color: "var(--".concat(c, ")"),
+    background: bg && "var(--".concat(bg, ")"),
+    color: c && "var(--".concat(c, ")"),
     cursor: cursor || onClick ? 'pointer' : 'inherit',
     display: display,
     flexDirection: flexDirection

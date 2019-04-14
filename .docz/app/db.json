@@ -1,0 +1,163 @@
+{
+  "config": {
+    "title": "Goncy",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.0.6",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "separator": "-",
+    "wrapper": "docz/utils/Wrapper",
+    "plugins": [
+      {}
+    ]
+  },
+  "props": [
+    {
+      "key": "lib/components/controls/Button.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Button",
+          "methods": [],
+          "actualName": "Button",
+          "props": {
+            "bg": {
+              "defaultValue": {
+                "value": "'light'",
+                "computed": false
+              },
+              "required": false
+            },
+            "c": {
+              "defaultValue": {
+                "value": "'secondary'",
+                "computed": false
+              },
+              "required": false
+            },
+            "isRaised": {
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "lib/components/controls/Form/Field.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Field",
+          "methods": [],
+          "actualName": "Field"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "key": "lib/components/components.mdx",
+      "value": {
+        "name": "Introduction",
+        "route": "/",
+        "id": "d888254e4b0500763c32d87caf1b9dd4",
+        "filepath": "lib/components/components.mdx",
+        "link": "",
+        "slug": "lib-components-components",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "goncy",
+            "depth": 1,
+            "value": "Goncy"
+          },
+          {
+            "slug": "batteries-included",
+            "depth": 3,
+            "value": "Batteries included:"
+          }
+        ]
+      }
+    },
+    {
+      "key": "lib/components/controls/Button.mdx",
+      "value": {
+        "name": "Button",
+        "menu": "Controls/Button",
+        "route": "/controls/button",
+        "id": "4c501c45abb9ade4d241941cba2d9dae",
+        "filepath": "lib/components/controls/Button.mdx",
+        "link": "",
+        "slug": "lib-components-controls-button",
+        "headings": [
+          {
+            "slug": "button",
+            "depth": 1,
+            "value": "Button"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "lib/components/controls/Form.mdx",
+      "value": {
+        "name": "Form",
+        "menu": "Controls/Form",
+        "route": "/controls/form",
+        "id": "71f9916758ee6bd256ca5a17e6346f04",
+        "filepath": "lib/components/controls/Form.mdx",
+        "link": "",
+        "slug": "lib-components-controls-form",
+        "headings": [
+          {
+            "slug": "form",
+            "depth": 1,
+            "value": "Form"
+          },
+          {
+            "slug": "field",
+            "depth": 1,
+            "value": "Field"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "formconfig",
+            "depth": 1,
+            "value": "FormConfig"
+          },
+          {
+            "slug": "props-1",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,9 +1,52 @@
 {
   "name": "goncy",
-  "version": "1.0.2",
-  "author": "goncy <gonzalo.pozzo4@gmail.com>",
+  "version": "0.0.6",
   "license": "MIT",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "prebuild:utils": "rm -rf ./utils",
+    "prebuild:components": "rm -rf ./components",
+    "prebuild:styles": "rm -rf ./styles",
+    "build:utils": "babel ./lib/utils -d ./utils",
+    "build:components": "babel ./lib/components -d ./components",
+    "build:styles": "postcss ./lib/styles/*.css --use autoprefixer -d ./styles",
+    "build": "yarn build:components && yarn build:styles && yarn build:utils",
+    "start": "npm run build -- --watch"
+  },
   "devDependencies": {
-    "lerna": "^3.13.1"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.5.0",
+    "babel-eslint": "^10.0.1",
+    "docz": "latest",
+    "docz-plugin-css": "latest",
+    "docz-theme-default": "latest",
+    "eslint": "^5.15.3",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-plugin-cypress": "^2.2.1",
+    "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.5.1",
+    "formik": "^1.5.1",
+    "postcss-cli": "^6.1.2",
+    "prettier": "^1.16.4",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-hot-loader": "^4.8.3",
+    "styled-components": "^4.2.0"
+  },
+  "gitHead": "4effbe5cc79b6f1731a9d36f9345bafc0124d9a7",
+  "peerDependencies": {
+    "formik": "^1.5.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "styled-components": "^4.2.0"
   }
 }

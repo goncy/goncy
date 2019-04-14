@@ -1,0 +1,7 @@
+./lib
+./docz
+.babelrc
+.eslint
+.eslintignore
+.editorconfig
+doczrc.js

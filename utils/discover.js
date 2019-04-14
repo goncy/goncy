@@ -2,10 +2,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import { createFactory } from "react";
+import { createFactory } from 'react';
 export var requireAll = function requireAll(ctx) {
   return ctx.keys().map(ctx).map(function (m) {
-    return m.default;
+    return m["default"];
   }).filter(function (_) {
     return _;
   });
