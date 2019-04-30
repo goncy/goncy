@@ -1,19 +1,25 @@
 :root {
   --white: #ffffff;
-  --light: #fafafa;
-  --light-darker: #f5f5f5;
-  --gray: #DAE0E6;
-  --dark: #212121;
-  --dark-lighter: #3f3f3f;
   --black: #000;
+
+  --light: #fafafa;
+  --light-darker: #f7f7f7;
+
+  --dark: #3f3f3f;
+  --dark-lighter: #808080;
+
   --error: #f95168;
+
   --primary: #3ecf8e;
-  --primary-lighter: #9ad8bc;
   --secondary: #7795f8;
-  --linkedin-blue: #0077B5;
-  --facebook-blue: #4167B2;
-  --font-family-default: "Helvetica";
-  --z1: 0 1px 1px 0 rgba(0,0,0, 0.12);
+  --tertiary: #32325d;
+
+  --z0: none;
+  --z1: 0 1px 2px 0 rgba(0,0,0, 0.16);
   --z2: 0 4px 6px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.08);
   --z3: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  --z4: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.1), 0 -6px 16px -6px rgba(0,0,0,.025);
+  --z5: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+
+  --font-family-default: "Helvetica";
 }

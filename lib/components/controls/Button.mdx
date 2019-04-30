@@ -1,7 +1,7 @@
 ---
 name: Button
-menu: Controls/Button
-route: /controls/button
+menu: 1. Controls
+route: /components/controls/button
 ---
 
 # Button
@@ -13,7 +13,6 @@ route: /controls/button
 |Name|Type|Default|Description|
 |----|----|-------|-----------|
 |isRaised|`boolean`|`true`|Shows a translate-to-top animation|
-|isFit|`boolean`|`true`|Fits to its content|
 
 ## Usage
 import {Playground} from "docz";
@@ -21,8 +20,17 @@ import {Playground} from "docz";
 import Button from "./Button";
 
 <Playground>
-  <Button bg="primary" c="light" mr={12}>Lorem ipsum</Button>
-  <Button bg="secondary" c="light" mr={12}>Lorem ipsum</Button>
-  <Button mr={12}>Lorem ipsum</Button>
-  <Button c="primary">Lorem ipsum</Button>
+  <div>
+    <h2>Colors</h2>
+    <Button bg="primary" c="light" mr={12}>Lorem ipsum</Button>
+    <Button bg="secondary" c="light" mr={12}>Lorem ipsum</Button>
+    <Button mr={12}>Lorem ipsum</Button>
+    <Button mb={32} c="primary">Lorem ipsum</Button>
+
+    <h2>Unraised</h2>
+    <Button mb={32} isRaised={false} bg="primary" c="light" mr={12}>Lorem ipsum</Button>
+
+    <h2>Disabled</h2>
+    <Button isDisabled bg="primary" c="light" mr={12}>Lorem ipsum</Button>
+  </div>
 </Playground>

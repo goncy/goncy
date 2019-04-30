@@ -6,12 +6,14 @@
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "prebuild:utils": "rm -rf ./utils",
+    "prebuild:hooks": "rm -rf ./components",
     "prebuild:components": "rm -rf ./components",
     "prebuild:styles": "rm -rf ./styles",
     "build:utils": "babel ./lib/utils -d ./utils",
+    "build:hooks": "babel ./lib/hooks -d ./hooks",
     "build:components": "babel ./lib/components -d ./components",
     "build:styles": "postcss ./lib/styles/*.css --use autoprefixer -d ./styles",
-    "build": "yarn build:components && yarn build:styles && yarn build:utils",
+    "build": "yarn build:hooks && yarn build:components && yarn build:styles && yarn build:utils",
     "start": "npm run build -- --watch"
   },
   "devDependencies": {

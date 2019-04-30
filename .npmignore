@@ -1,5 +1,6 @@
 ./lib
 ./docz
+./node_modules
 .babelrc
 .eslint
 .eslintignore

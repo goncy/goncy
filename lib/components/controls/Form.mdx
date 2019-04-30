@@ -1,7 +1,7 @@
 ---
 name: Form
-menu: Controls/Form
-route: /controls/form
+menu: 1. Controls
+route: /components/controls/form
 ---
 
 # Form
@@ -34,19 +34,22 @@ route: /controls/form
 ## Usage
 import {Playground} from "docz";
 
+import Button from "../controls/Button"
+import TextField from "../inputs/TextField"
+
 import {FormConfig, Form, Field} from "./Form/index.js";
 
 <Playground>
   <FormConfig
-    initialValues={{name: 'Gonzalo'}}
+    initialValues={{count: 1}}
     onSubmit={console.log}
   >
     {({ isValid, handleSubmit }) => (
       <Form>
-        <Field name="name">
-          <input type="text"/>
+        <Field name="count" validate={value => Number(value) > 10 && "Should be less than 10"}>
+          <TextField type="number"/>
         </Field>
-        <button type="submit">Submit</button>
+        <Button bg="primary" c="light" isDisabled={!isValid} type="submit">Submit</Button>
       </Form>
     )}
   </FormConfig>

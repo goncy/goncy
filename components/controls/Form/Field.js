@@ -27,11 +27,13 @@ var Field = function Field(_ref) {
   var label = _ref.label,
       name = _ref.name,
       children = _ref.children,
+      validate = _ref.validate,
       getValueFromEvent = _ref.getValueFromEvent,
-      props = _objectWithoutProperties(_ref, ["label", "name", "children", "getValueFromEvent"]);
+      props = _objectWithoutProperties(_ref, ["label", "name", "children", "validate", "getValueFromEvent"]);
 
   return React.createElement(Container, null, label && React.createElement(Label, null, label), React.createElement(FormikField, _extends({
-    name: name
+    name: name,
+    validate: validate
   }, props), function (_ref2) {
     var field = _ref2.field,
         form = _ref2.form;

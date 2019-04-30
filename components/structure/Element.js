@@ -10,6 +10,10 @@ var fallback = function fallback() {
   });
 };
 
+var fallbackVar = function fallbackVar(color) {
+  return color && color.match(/^([a-z|-])+$/) ? "var(--".concat(color, ", ").concat(color, ")") : color;
+};
+
 var Element = styled.div(function (_ref) {
   var m = _ref.m,
       mv = _ref.mv,
@@ -30,9 +34,16 @@ var Element = styled.div(function (_ref) {
       c = _ref.c,
       w = _ref.w,
       h = _ref.h,
+      z = _ref.z,
+      type = _ref.type,
+      isCentered = _ref.isCentered,
+      justifyContent = _ref.justifyContent,
+      boxShadow = _ref.boxShadow,
+      alignItems = _ref.alignItems,
       cursor = _ref.cursor,
       onClick = _ref.onClick,
       display = _ref.display,
+      textAlign = _ref.textAlign,
       flexDirection = _ref.flexDirection;
   return {
     margin: m,
@@ -45,13 +56,17 @@ var Element = styled.div(function (_ref) {
     paddingTop: fallback(pt, pv),
     paddingLeft: fallback(pl, ph),
     paddingRight: fallback(pr, ph),
+    alignItems: fallback(alignItems, isCentered ? 'center' : 'inherit'),
+    justifyContent: fallback(justifyContent, isCentered ? 'center' : 'inherit'),
     borderRadius: br,
+    textAlign: textAlign,
     width: w,
     height: h,
-    background: bg && "var(--".concat(bg, ")"),
-    color: c && "var(--".concat(c, ")"),
-    cursor: cursor || onClick ? 'pointer' : 'inherit',
-    display: display,
+    background: fallbackVar(bg),
+    color: fallbackVar(c),
+    cursor: cursor || onClick || type === 'submit' ? 'pointer' : 'inherit',
+    display: fallback(display, isCentered ? 'flex' : 'inherit'),
+    boxShadow: fallback(boxShadow, z && "var(--z".concat(z, ")")),
     flexDirection: flexDirection
   };
 });

@@ -1,0 +1,26 @@
+---
+name: Card
+menu: 3. Structure
+route: /components/structure/card
+---
+
+# Card
+*A pretty card*
+
+## Props
+*Extends `Element`*
+
+## Usage
+import {Playground} from "docz";
+
+import Card from "./Card";
+
+<Playground>
+  <div>
+    <h2>Base</h2>
+    <Card mb={40} w="fit-content">Hello world</Card>
+
+    <h2>Custom</h2>
+    <Card isCentered bg="secondary" c="light" mb={40} w={300} h={200} z={5}>Hello world</Card>
+  </div>
+</Playground>

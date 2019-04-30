@@ -1,0 +1,26 @@
+---
+name: useStateReducer
+menu: 3. Hooks
+route: /hooks/state/use-state-reducer
+---
+
+# useStateReducer
+*A setState-like reducer state manager*
+
+## Usage
+import useStateReducer from "./useStateReducer"
+
+```js
+const [state, dispatch] = useStateReducer(
+  { count: 0, anotherThing: 'something' },
+  {
+    increment: state => ({ count: state.count + 1 }),
+    decrement: state => ({ count: state.count - 1 })
+  }
+);
+
+// state.count -> 0
+// dispatch('increment') -> 1
+// dispatch('decrement') -> 0
+// state -> {count: 0, anotherThing: 'something'}
+```

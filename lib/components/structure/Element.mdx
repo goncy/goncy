@@ -1,0 +1,60 @@
+---
+name: Element
+menu: 3. Structure
+route: /components/structure/element
+---
+
+# Element
+*A useful primitive*
+
+## Props
+|Name|Type|Default|Description|
+|----|----|-------|-----------|
+|z|`number`|`0`|Elevation|
+|p|`number|string`|`0`|Padding|
+|pv|`number|string`|`0`|Padding vertical|
+|ph|`number|string`|`0`|Padding horizontal|
+|pt|`number|string`|`0`|Padding top|
+|pr|`number|string`|`0`|Padding right|
+|pb|`number|string`|`0`|Padding bottom|
+|pl|`number|string`|`0`|Padding left|
+|m|`number|string`|`0`|Margin|
+|mv|`number|string`|`0`|Margin vertical|
+|mh|`number|string`|`0`|Margin horizontal|
+|mt|`number|string`|`0`|Margin top|
+|mr|`number|string`|`0`|Margin right|
+|mb|`number|string`|`0`|Margin bottom|
+|ml|`number|string`|`0`|Margin left|
+|c|`string`|`-`|Text color variable name|
+|bg|`string`|`-`|Background color variable name|
+|isCentered|`boolean`|`false`|Center contents using flex positions|
+
+## Usage
+import {Playground} from "docz";
+
+import Card from "./Card";
+import Element from "./Element";
+
+<Playground>
+  <Element>
+    <h2>Elevations</h2>
+    <Card mb={40} w="fit-content" bg="light" z={0}>Elevation 0</Card>
+    <Card mb={40} w="fit-content" bg="light" z={1}>Elevation 1</Card>
+    <Card mb={40} w="fit-content" bg="light" z={2}>Elevation 2</Card>
+    <Card mb={40} w="fit-content" bg="light" z={3}>Elevation 3</Card>
+    <Card mb={40} w="fit-content" bg="light" z={4}>Elevation 4</Card>
+    <Card mb={40} w="fit-content" bg="light" z={5}>Elevation 5</Card>
+
+    <h2>Gaps</h2>
+    <Card mb={40} w="fit-content" p={0} bg="light" p={50}>Padding 50</Card>
+    <Card mb={40} w="fit-content" p={0} bg="light" pv={50}>Padding vertical 50</Card>
+    <Card mb={40} w="fit-content" p={0} bg="light" ph={50}>Padding horizontal 50</Card>
+
+    <h2>Colors</h2>
+    <Card mb={40} z={0} w="fit-content" bg="primary" c="light">BG primary / Color light</Card>
+
+    <h2>Position</h2>
+    <Card mb={40} w={300} h={300} bg="light">Default</Card>
+    <Card isCentered mb={40} w={300} h={300} bg="light">Centered</Card>
+  </Element>
+</Playground>
