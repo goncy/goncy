@@ -27,7 +27,7 @@ I'm a Frontend developer with my ♥ in [React](https://reactjs.org). I'm a [Cyp
 
 ## What i'm up to
 
-- 🔭 I’m currently working @ [TradeHelm](https://tradehelm.com).
+- 🔭 I’m currently working @ [Vercel](https://vercel.com).
 - 🌱 I’m currently working with [React](https://reactjs.org).
 - 👯 Owner of a Developer Community.
 - 💬 Creating content in [my blog](https://blog.gonzalopozzo.com), [Twitch](https://twitch.gonzalopozzo.com) and [YouTube](https://youtube.gonzalopozzo.com).
