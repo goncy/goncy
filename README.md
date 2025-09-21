@@ -1,5 +1,5 @@
 ## Hello World 👋 It's [goncy!](https://gonzalopozzo.com)
-I'm a Frontend developer with my ♥ in [React](https://reactjs.org). I'm a [Cypress](https://cypress.io/ambassadors/) ambassador, [GitHub](https://stars.github.com/) Star, [Twitch](https://twitch.gonzalopozzo.com) partner and creator of [Pency](https://pency.app).
+I'm a Frontend developer with my ♥ in [React](https://reactjs.org). I'm a [v0](https://v0.app) ambassador, [Cypress](https://cypress.io/ambassadors/) ambassador, [GitHub](https://stars.github.com/) Star, [Twitch](https://twitch.gonzalopozzo.com) partner and creator of [Pency](https://pency.app).
 
 <br/>
 
