@@ -153,6 +153,11 @@ function repoCard(t, repo, { description }, index) {
     title: repo.name,
     description,
     iconName: 'github',
+    // Full-width rows: one description line, compact height.
+    width: 840,
+    height: 116,
+    descY: 68,
+    maxLines: 1,
     shimmerDelay: index * 1.5,
     meta: (y) => `${star({ cx: 30, cy: y - 4.5, r: 6, fill: t.accentInk })}<text x="42" y="${y}" class="meta">${esc(metaText)}</text>`,
   });

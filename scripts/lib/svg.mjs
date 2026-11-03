@@ -164,13 +164,13 @@ export function cardFrame({ t, width, height, rx = 12, shimmerDelay = 0, id = 'c
   return { defs, body };
 }
 
-// Link card used for repos (live stars) and for the Twitch card.
+// Link card used for the featured repos (live stars).
 // `meta(y)` returns the bottom row markup for a given baseline.
-export function linkCard({ t, title, description, iconName, meta, width = 412, height = 148, shimmerDelay = 0, fonts = {} }) {
+export function linkCard({ t, title, description, iconName, meta, width = 412, height = 148, descY = 76, maxLines = 2, shimmerDelay = 0, fonts = {} }) {
   const frame = cardFrame({ t, width, height, shimmerDelay });
-  const lines = wrap(description, { fontSize: 14, maxWidth: width - 48 });
+  const lines = wrap(description, { fontSize: 14, maxWidth: width - 48, maxLines });
   const desc = lines
-    .map((line, i) => `<text x="24" y="${76 + i * 21}" class="desc">${esc(line)}</text>`)
+    .map((line, i) => `<text x="24" y="${descY + i * 21}" class="desc">${esc(line)}</text>`)
     .join('');
   const css = `${fontCss(['sans-400', 'sans-600', 'mono-400'], fonts)}
 ${BASE_CSS}

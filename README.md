@@ -20,11 +20,11 @@ I'm also a [GitHub Star](https://stars.github.com/profiles/goncy), [v0](https://
 Start here. Everything is free.
 
 <p>
-  <a href="https://twitch.gonzalopozzo.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/main/assets/card-twitch-dark.svg"><img alt="Live on Twitch: streams about landing your first job in IT, interviews and frontend. Weekly, in Spanish." src="https://raw.githubusercontent.com/goncy/goncy/main/assets/card-twitch-light.svg" width="49%"></picture></a>
-  <a href="https://github.com/goncy/interview-challenges"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/repo-interview-challenges-dark.svg"><img alt="interview-challenges: algorithm, live-coding and take-home interview challenges, solved on stream." src="https://raw.githubusercontent.com/goncy/goncy/output/repo-interview-challenges-light.svg" width="49%"></picture></a>
+  <a href="https://github.com/goncy/interview-challenges"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/repo-interview-challenges-dark.svg"><img alt="interview-challenges: algorithm, live-coding and take-home interview challenges, solved on stream." src="https://raw.githubusercontent.com/goncy/goncy/output/repo-interview-challenges-light.svg" width="100%"></picture></a>
   <br>
-  <a href="https://github.com/goncy/nextjs-course"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/repo-nextjs-course-dark.svg"><img alt="nextjs-course: an introductory course to Next.js and the App Router." src="https://raw.githubusercontent.com/goncy/goncy/output/repo-nextjs-course-light.svg" width="49%"></picture></a>
-  <a href="https://github.com/goncy/aprender-en-tiempos-de-ia"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/repo-aprender-en-tiempos-de-ia-dark.svg"><img alt="aprender-en-tiempos-de-ia: guide from my talk about learning to code in the age of AI." src="https://raw.githubusercontent.com/goncy/goncy/output/repo-aprender-en-tiempos-de-ia-light.svg" width="49%"></picture></a>
+  <a href="https://github.com/goncy/nextjs-course"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/repo-nextjs-course-dark.svg"><img alt="nextjs-course: an introductory course to Next.js and the App Router." src="https://raw.githubusercontent.com/goncy/goncy/output/repo-nextjs-course-light.svg" width="100%"></picture></a>
+  <br>
+  <a href="https://github.com/goncy/aprender-en-tiempos-de-ia"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/repo-aprender-en-tiempos-de-ia-dark.svg"><img alt="aprender-en-tiempos-de-ia: guide from my talk about learning to code in the age of AI." src="https://raw.githubusercontent.com/goncy/goncy/output/repo-aprender-en-tiempos-de-ia-light.svg" width="100%"></picture></a>
 </p>
 
 ### What I build with
@@ -34,7 +34,19 @@ Start here. Everything is free.
   <img alt="Stack: Next.js, React, TypeScript, Tailwind CSS, Vercel, AI SDK and v0." src="https://raw.githubusercontent.com/goncy/goncy/main/assets/stack-light.svg" width="100%">
 </picture>
 
-<details>
+### Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/stats-dark.svg">
+  <img alt="GitHub activity for goncy: followers, stars, public repos and contributions over the last 12 months." src="https://raw.githubusercontent.com/goncy/goncy/output/stats-light.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/contrib-3d-dark.svg">
+  <img alt="3D chart of goncy's GitHub contributions over the last year, with languages and contribution types." src="https://raw.githubusercontent.com/goncy/goncy/output/contrib-3d-light.svg" width="100%">
+</picture>
+
+<details open>
 <summary><b>My path so far</b></summary>
 <br>
 
@@ -50,17 +62,5 @@ Start here. Everything is free.
 | Along the way | GitHub Star, v0 Ambassador, Cypress Ambassador and freeCodeCamp Buenos Aires co-organizer |
 
 </details>
-
-### Activity
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/stats-dark.svg">
-  <img alt="GitHub activity for goncy: followers, stars, public repos and contributions over the last 12 months." src="https://raw.githubusercontent.com/goncy/goncy/output/stats-light.svg" width="100%">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/goncy/goncy/output/contrib-3d-dark.svg">
-  <img alt="3D chart of goncy's GitHub contributions over the last year, with languages and contribution types." src="https://raw.githubusercontent.com/goncy/goncy/output/contrib-3d-light.svg" width="100%">
-</picture>
 
 <p align="center"><sub>Stats refresh daily with GitHub Actions. Assets are generated by the scripts in this repo.</sub></p>

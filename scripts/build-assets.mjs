@@ -6,7 +6,7 @@ import subsetFont from 'subset-font';
 import * as simpleIcons from 'simple-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
-  ROOT, ASSETS, THEMES, SANS, MONO, BASE_CSS, esc, fontCss, fontSourceFile, svgDoc, iconAt, arrowUpRight, linkCard, writeAsset,
+  ROOT, ASSETS, THEMES, SANS, MONO, BASE_CSS, esc, fontCss, fontSourceFile, svgDoc, iconAt, arrowUpRight, writeAsset,
 } from './lib/svg.mjs';
 
 // `geist` does not export its font files, so read them from node_modules directly.
@@ -16,7 +16,6 @@ const geistDir = path.join(ROOT, 'node_modules/geist/dist/fonts');
 
 const HERO = {
   name: 'Gonzalo Pozzo',
-  pill: 'goncy · Quilmes, Buenos Aires, AR',
   tagline: 'Helping devs land their first (or a better) job in IT.',
   titles: ['Forward Deployed Engineer ▲ Vercel', 'GitHub Star', 'v0 Ambassador', 'Cypress Ambassador', 'Twitch Partner'],
 };
@@ -129,11 +128,9 @@ function hero(t, fonts) {
   const photo = fs.readFileSync(path.join(ASSETS, 'photo-hero.jpg')).toString('base64');
   const px = 40, py = 58, ps = 184;
   const tx = 264;
-  const pillW = [...HERO.pill].length * 7.2 + 40;
   const css = `${fontCss(['sans-400', 'sans-600', 'mono-400'], fonts)}
 ${BASE_CSS}
 .name{font:600 52px ${SANS};fill:${t.text};letter-spacing:-2px}
-.pill{font:400 12px ${MONO};fill:${t.muted}}
 .prompt{font:400 21px ${MONO};fill:${t.faint}}
 .type{font:400 21px ${MONO};fill:${t.text}}
 .tagline{font:400 16px ${SANS};fill:${t.muted}}
@@ -166,17 +163,12 @@ ${BASE_CSS}
   <image href="data:image/jpeg;base64,${photo}" x="${px}" y="${py}" width="${ps}" height="${ps}" clip-path="url(#photo)" preserveAspectRatio="xMidYMid slice"/>
   <rect x="${px + 0.5}" y="${py + 0.5}" width="${ps - 1}" height="${ps - 1}" rx="16" fill="none" stroke="${t.border}"/>
 </g>
-<g class="fade-up" style="animation-delay:.1s">
-  <rect x="${tx}" y="62" width="${pillW}" height="26" rx="13" fill="${t.tile}" stroke="${t.border}"/>
-  <circle class="pulse" cx="${tx + 16}" cy="75" r="3.5" fill="${t.accent}"/>
-  <text x="${tx + 28}" y="79" class="pill">${esc(HERO.pill)}</text>
-</g>
-<g class="fade-up" style="animation-delay:.2s"><text x="${tx - 3}" y="148" class="name">${esc(HERO.name)}</text></g>
+<g class="fade-up" style="animation-delay:.15s"><text x="${tx - 3}" y="126" class="name">${esc(HERO.name)}</text></g>
 <g class="fade-up" style="animation-delay:.3s">
-  <text x="${tx}" y="196" class="prompt">&gt;</text>
-  ${typingAnimation(t, { x0: tx + 2 * 21 * 0.6, y: 196, fontSize: 21 })}
+  <text x="${tx}" y="176" class="prompt">&gt;</text>
+  ${typingAnimation(t, { x0: tx + 2 * 21 * 0.6, y: 176, fontSize: 21 })}
 </g>
-<g class="fade-up" style="animation-delay:.4s"><text x="${tx}" y="240" class="tagline">${esc(HERO.tagline)}</text></g>`;
+<g class="fade-up" style="animation-delay:.4s"><text x="${tx}" y="220" class="tagline">${esc(HERO.tagline)}</text></g>`;
   return svgDoc({
     width: W, height: H, css, defs, body,
     title: `${HERO.name} (goncy). ${HERO.titles.join(', ')}. ${HERO.tagline}`,
@@ -220,27 +212,12 @@ ${BASE_CSS}
   return svgDoc({ width: W, height: H, css, body: tiles, title: `Stack: ${STACK.map((s) => s.label).join(', ')}` });
 }
 
-// ---------------------------------------------------------------- twitch card
-
-function twitchCard(t, fonts) {
-  return linkCard({
-    t,
-    title: 'Live on Twitch',
-    description: 'Streams about landing your first job in IT, interviews and frontend.',
-    iconName: 'twitch',
-    shimmerDelay: 1.5,
-    fonts,
-    meta: (y) => `<circle class="pulse" cx="28" cy="${y - 4}" r="4" fill="${t.accent}"/><text x="40" y="${y}" class="meta">weekly · in Spanish</text>`,
-  });
-}
-
 // ---------------------------------------------------------------- write
 
 const written = [];
 for (const t of Object.values(THEMES)) {
   written.push(writeAsset(path.join(ASSETS, `hero-${t.name}.svg`), await optimized((f) => hero(t, f))));
   written.push(writeAsset(path.join(ASSETS, `stack-${t.name}.svg`), await optimized((f) => stack(t, f))));
-  written.push(writeAsset(path.join(ASSETS, `card-twitch-${t.name}.svg`), await optimized((f) => twitchCard(t, f))));
   for (const [i, s] of SOCIALS.entries()) {
     written.push(writeAsset(path.join(ASSETS, 'social', `${s.id}-${t.name}.svg`), await optimized((f) => socialCard(t, s, i, f))));
   }
