@@ -1,0 +1,17 @@
+{
+  "name": "goncy-profile",
+  "private": true,
+  "type": "module",
+  "description": "Assets and generators for github.com/goncy",
+  "scripts": {
+    "build:assets": "node scripts/build-assets.mjs",
+    "build:stats": "node scripts/generate-stats.mjs",
+    "check:links": "bash scripts/check-links.sh"
+  },
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "7.3.1",
+    "geist": "1.9.0",
+    "simple-icons": "16.36.0",
+    "subset-font": "2.9.0"
+  }
+}

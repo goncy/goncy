@@ -1,0 +1,62 @@
+name: Profile assets
+
+# Regenerates the data-driven SVGs (stats, repo cards, 3D contributions)
+# and publishes them to the `output` branch, so `main` only has human commits.
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/profile.yml'
+      - '.github/profile-3d.json'
+      - 'scripts/**'
+      - 'assets/fonts/**'
+      - 'assets/icons/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Stats and repo cards
+        run: node scripts/generate-stats.mjs dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: 3D contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: .github/profile-3d.json
+
+      - name: Collect output
+        run: |
+          mv profile-3d-contrib/*.svg dist/
+          ls -la dist
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: dist
+          jekyll: false
+          commit_message: 'chore: refresh profile assets'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
